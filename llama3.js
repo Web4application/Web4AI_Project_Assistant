@@ -31,14 +31,14 @@ async function runAIRefactor() {
 
 // Function for refactoring using OpenAI's GPT model (online)
 async function realAIRefactor(code) {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  const response = await fetch('https://api.lmlm.com/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Authorization': 'AIzaSyAvrxOyAVzPVcnzxuD0mjKVDyS2bNWfC10',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'gpt-4',
+      model: 'gpt-5-mini',
       messages: [
         { role: 'system', content: 'You are a senior developer.' },
         { role: 'user', content: 'Refactor and optimize this code:\\n\\n' + code }
